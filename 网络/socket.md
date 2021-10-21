@@ -64,6 +64,7 @@ struct in_addr
 
 
 ### 地址转换
+<arpa/inet.h>：
 ~~~cpp
 in_addr                     // uint32_t 
 inet_addr("192.168.1.1")    // str to in_addr
@@ -78,6 +79,11 @@ inet_pton()
 inet_ntop()
 ~~~
 
+<netdb.h>：
+~~~cpp
+getaddrinfo 把字符串地址、端口 转换成 sockaddr_in 链表
+~~~
+
 
 ### 字节序
 字节序分为大端字节序和小端字节序：
@@ -85,12 +91,12 @@ inet_ntop()
 小端字节序： 是指一个整数的高位字节（32-31bit）存储在内存的高地址处，低位字节（0-7bit）存储在内存的低地址处。
 现代PC大多采用小端字节序，所以小端字节序又被称为主机字节序。大端字节序也称为网络字节序。
 
-/C++写网络程序的时候，往往会遇到字节的网络顺序和主机顺序的问题。这是就可能用到htons(), ntohl(), ntohs()，htons()这4个函数。
-　　网络字节顺序与本地字节顺序之间的转换函数：
-　　　　htonl()–“Host to Network Long”
-　　　　ntohl()–“Network to Host Long”
-　　　　htons()–“Host to Network Short”
-　　　　ntohs()–“Network to Host Short”
+C++写网络程序的时候，往往会遇到字节的网络顺序和主机顺序的问题。这是就可能用到htons(), ntohl(), ntohs()，htons()这4个函数。  
+　　网络字节顺序与本地字节顺序之间的转换函数：  
+　　　　htonl()–“Host to Network Long”  
+　　　　ntohl()–“Network to Host Long”  
+　　　　htons()–“Host to Network Short”  
+　　　　ntohs()–“Network to Host Short”  
 > 定义在 <netinet/in.h>
 
 ### 
@@ -105,4 +111,4 @@ inet_ntop()
 
 <arpa/inet.h> inet_pton 等地址转换
 
-<netdb.h> gethostbyname 域名相关操作
+<netdb.h> gethostbyname 域名相关操作、getaddrinfo
