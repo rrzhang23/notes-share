@@ -49,7 +49,9 @@ export CXX=$HOME/.local/gcc-7.4.0/bin/g++
 export LD_LIBRARY_PATH=/lib:/lib64:/usr/lib:/usr/lib64:/usr/local/lib:/usr/local/lib64
 export LD_LIBRARY_PATH=$GCC_HOME/lib:$GCC_HOME/lib64:$GCC_HOME/libexec:$LD_LIBRARY_PATH
 
-cd mysql-8.0.23-src/build
+cd mysql-8.0.23-src
+mkdir build
+cd build
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=/home/zhangrongrong/mysql-8.0.23/mysql \
 -DMYSQL_DATADIR=/home/zhangrongrong/mysql-8.0.23/data \
