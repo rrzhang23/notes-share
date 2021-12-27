@@ -15,9 +15,9 @@
 | boost | > 1.73.0 |
 | protobuf | 源码包自带，extra/protobuf 下 |
 
-下载 boost 解压至 mysql-8.0.23 目录下：
+下载 boost 解压至 mysql-8.0.23-src 目录下：
 ```
-- mysql-8.0.23
+- mysql-8.0.23-src
   - boost_1_73_0
     - boost
 	  - accumulators
@@ -37,7 +37,7 @@ cmake 时需要指定几个目录：`CMAKE_INSTALL_PREFIX`、`MYSQL_DATADIR`。
 ## 安装
 我们指定以下几个目录及文件：
 ```
-- mysql-8.0.23/mysql // 安装目录
+- mysql-8.0.23/mysql // 安装目录, bin、lib、include
 - mysql-8.0.23/data  // data目录
 - mysql-8.0.23/tmp   // tmp 目录，存放 .pid、.socks、log 等文件
 - mysql-8.0.23/my.cnf
@@ -49,7 +49,7 @@ export CXX=$HOME/.local/gcc-7.4.0/bin/g++
 export LD_LIBRARY_PATH=/lib:/lib64:/usr/lib:/usr/lib64:/usr/local/lib:/usr/local/lib64
 export LD_LIBRARY_PATH=$GCC_HOME/lib:$GCC_HOME/lib64:$GCC_HOME/libexec:$LD_LIBRARY_PATH
 
-
+cd mysql-8.0.23-src/build
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=/home/zhangrongrong/mysql-8.0.23/mysql \
 -DMYSQL_DATADIR=/home/zhangrongrong/mysql-8.0.23/data \
