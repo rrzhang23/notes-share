@@ -38,6 +38,9 @@ git clone git@code.aliyun.com:871458417/engine.git myreponame   // myreponame为
 git remote -v               // 查看连接的远程库
 git remote add test git@github.com:rongzia/test.git // 连接到信任的远程仓库,克隆时已经默认加了这步。
 git remote remove test      // 删除指定名称的远程连接
+
+# 为 ssh 配置好 .ssh/config 后，可同步局域网内的仓库，且文件夹后面不需要加 '.git'，直接 'some' 就行，而不是 'some.git'：
+git remote add 121 ssh://zhangrongrong@10.11.6.121/home/zhangrongrong/projects/some
 ```
 > clone 时，会默认生成一个 origin 的远程连接，没有特殊含义，只是默认名字而已。这里写成了 test。 
 
