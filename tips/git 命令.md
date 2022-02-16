@@ -41,7 +41,7 @@ git remote remove test      // 删除指定名称的远程连接
 
 # 为 ssh 配置好 .ssh/config 后，可同步局域网内的仓库，且文件夹后面不需要加 '.git'，直接 'some' 就行，而不是 'some.git'：
 git remote add 121 ssh://zhangrongrong@10.11.6.121/home/zhangrongrong/projects/some
-# 此时远程仓库可能拒绝本地的push，原因是远程仓库初始化没有用 'git config receive.denyCurrentBranch ignore'，补救的方法，在服务器上运行：
+# 此时远程仓库可能拒绝本地的push，原因是远程仓库初始化没有用 'git--bare init'，补救的方法，在服务器上运行：
 git config receive.denyCurrentBranch ignore
 ```
 > clone 时，会默认生成一个 origin 的远程连接，没有特殊含义，只是默认名字而已。这里写成了 test。 
