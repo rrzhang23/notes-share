@@ -25,6 +25,7 @@
   * [远程开发](工具及教程/远程开发.md)
   * [clang 介绍及安装](工具及教程/clang%20介绍及安装.md)
   * [MySQL 跑 oltpbech](工具及教程/MySQL%20跑%20oltpbech.md)
+  * [vscode task](工具及教程/vscode%20task.md)
 
 * 数码
   * [安卓 adb](玩机/安卓-adb.md)
