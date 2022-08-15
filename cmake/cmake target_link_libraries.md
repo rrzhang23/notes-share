@@ -56,10 +56,10 @@ add_executable(main main.cpp)
 ~~~
 
 
-> 可以使用 libxxx.so/a 的简写 xxx，可以使用全名，可以使用 -l:libxxx.so/a，但必须后面是全名，后缀加版本号也行
-> 可以使用 libxxx.so/a.1.1 这样的后缀，-l:libxxx.so/a.1.1 也行
-> 链接多个库时，空格可以用分号代替，-l: 也可以加在所有库名字前
-> 即使可以使用 -l:libxxx.a 代替，但是 cmake 会自动在库名字前加上 -l，cmake::target_link_libraries 中 -llibxxx.a 写法是不行的
+> 可以使用 libxxx.so/a 的简写 xxx，可以使用全名，可以使用 -l:libxxx.so/a，但必须后面是全名，后缀加版本号也行  
+> 可以使用 libxxx.so/a.1.1 这样的后缀，-l:libxxx.so/a.1.1 也行  
+> 链接多个库时，空格可以用分号代替，-l: 也可以加在所有库名字前  
+> 即使可以使用 -l:libxxx.a 代替，但是 cmake 会自动在库名字前加上 -l，cmake::target_link_libraries 中 -llibxxx.a 写法是不行的  
 
 
 
