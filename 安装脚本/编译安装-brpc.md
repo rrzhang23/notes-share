@@ -82,6 +82,7 @@ git clone https://github.com/protocolbuffers/protobuf.git
 cd protobuf
 git branch 4.0.x ee5887d
 git checkout 4.0.x
+chmod a+x autogen.sh
 ./autogen.sh
 ./configure --prefix=/home/zhangrongrong/.local/brpc-env/protobuf-4.0.x CXXFLAGS=-fPIC CFLAGS=-fPIC && make -j32 && make install
 make clean
