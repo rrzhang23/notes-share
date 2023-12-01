@@ -121,6 +121,9 @@ cd incubator-brpc
 git checkout rdma
 git reset --hard
 git clean -d -fx
+
+chmod a+x tools/get_brpc_revision.sh
+
 mkdir build
 cd build
 
@@ -144,10 +147,15 @@ cd ../../
 
 ### cmake 安装 v1.2 版本
 ~~~cpp
-git brach release-1.2 2949110
+git branch release-1.2 2949110
 git checkout release-1.2
 vim CMakeLists.txt
 // 加入 cmake_policy(SET CMP0074 NEW)
+
+chmod a+x tools/get_brpc_revision.sh
+
+mkdir build
+cd build
 
 cmake \
 -DCMAKE_INSTALL_PREFIX=/home/zhangrongrong/.local/brpc-1.2.0 -DBUILD_SHARED_LIBS=on \
